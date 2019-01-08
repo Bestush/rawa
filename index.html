@@ -1,60 +1,670 @@
+@{
+Layout = null;
+}
+
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <meta name="viewport" content="width=device-width" />
+  <title>SellingItem</title>
+
+
+  <link href="~/CSS/form_style.css" rel="stylesheet" />
+  <link href="~/bootstrapp/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="~/DataTableStyle/dataTables.bootstrap.min.css" rel="stylesheet" />
+  <script src="~/DataTableStyle/jquery-3.3.1.js"></script>
+  <script src="~/DataTableStyle/jquery_dataTables_min.js"></script>
+  <script src="~/DataTableStyle/dataTables.bootstrap.min.js"></script>
+  <link href="~/CSS/bootstrap_datepicker1.css" rel="stylesheet" />
+  <script src="~/CSS/bootstrap-datepicker2.js"></script>
+  <script src="~/bootstrapp/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
     crossorigin="anonymous">
   <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-    crossorigin="anonymous">
+  <style>
+    .search {
+            background-image: url('../../img/search-icon.png');
+            background-repeat: no-repeat;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+        a {
+            color: black;
+          }
+
+        .numberCircle {
+            border-radius: 20%;
+            behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+            width: 27px;
+            height: 25px;
+            padding: 4px;
+            margin-top: 15px;
+            margin-left: 1270px;
+            background: red;
+            border: 2px solid red;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            font: 12px Arial, sans-serif;
+        }
+
+        .erp {
+            border-radius: 20%;
+            behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+            width: 30px;
+            height: 30px;
+            padding: 4px;
+            margin-top: -30px;
+            margin-left: 100px;
+            background: #5f2b9b;
+            border: 2px solid white;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            font: 15px Arial, sans-serif;
+        }
+    </style>
+
 </head>
 
 <body>
-  <div class="container">
-    <div class="row">
-      <h1>dfwfw</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
 
-      <div class="notSaved">
-        <div> <i class="fas fa-circle"></i></div>
-        <div>
-          <p>not saved</p>
+  <br><br>
+
+  <table border="0" style="position:fixed;margin-left:-10px;margin-top:-45px;width:1370px;">
+    <tr>
+      <td style="background-color:#efefef;height:55px">
+        <div style="margin-top:-10px">
+
+          <div class="numberCircle" style="margin-top:20px">1</div>
+
+          <div class="btn-group" style="margin-top:-14px">
+            <div class="dropdown" style="margin-left:1180px;padding-top:7px;margin-top:-38px">
+              <button class="btn  dropdown-toggle" style="font-size:9pt;color:gray;background-color:#efefef" type="button"
+                data-toggle="dropdown">
+                Help
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#" style="font-family:Calibri;font-size:10pt">help</a></li>
+
+              </ul>
+            </div>
+          </div>
+
+          <div class="btn-group" style="margin-top:-54px">
+            <div class="dropdown" style="margin-left:1100px;padding-top:7px;margin-top:-38px">
+              <button class="btn  dropdown-toggle" style="font-size:9pt;color:gray;background-color:#efefef" type="button"
+                data-toggle="dropdown">
+                User
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#" style="font-family:Calibri;font-size:10pt">Usage Info</a></li>
+                <li class="divider"></li>
+                <li><a href="#" style="font-family:Calibri;font-size:10pt">My Settings</a></li>
+                <li><a href="#" style="font-family:Calibri;font-size:10pt">Reload</a></li>
+                <li><a href="#" style="font-family:Calibri;font-size:10pt">View Website</a></li>
+                <li><a href="#" style="font-family:Calibri;font-size:10pt">Background Jobs</a></li>
+                <li class="divider"></li>
+                <li><a href="#" style="font-family:Calibri;font-size:10pt">Chat Support</a></li>
+                <li class="divider"></li>
+                <li><a href="#" style="font-family:Calibri;font-size:10pt">Logout</a></li>
+
+
+              </ul>
+            </div>
+          </div>
+
+
+          <div style="margin-top:-64px">
+            <input class="form-control" type="text" style="margin-left:850px;width:210px;height:30px;font-size:12px"
+              name="search" placeholder="Search...">
+          </div>
+
+          <div class="erp" id="logo_erp" style="cursor:pointer">E</div>
         </div>
-      </div>
-      <button>Save</button>
-    </div>
-    <hr>
-    <form>
-      <div class="form-group">
-        <div class="row">
-          <div class="col-4"> <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"></div>
-          <div class="col-4"><label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"></div>
-          <div class="col-4"><label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"></div>
 
+      </td>
+    </tr>
+
+
+
+    <tr>
+      <td style="background-color: white;border-bottom:1px solid #eaeaed;width:60px;height:30px">
+        <br>
+        <div style="margin-left:130px;margin-top:-10px;font-size:25px;font-weight:100">Account</div>
+        <div style="margin-left:1200px;margin-top:-30px">
+          <div class="dropdown">
+            <button class="btn  dropdown-toggle" style="font-size:9pt;color:gray;background-color:#efefef" type="button"
+              data-toggle="dropdown">
+              Menu
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#" style="font-family:Calibri;font-size:10pt">Set Desktop Icons</a></li>
+              <li><a href="#" style="font-family:Calibri;font-size:10pt">Instal Apps</a></li>
+            </ul>
+          </div>
         </div>
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-      </div>
-      <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      </div>
-    </form>
+        <br>
+      </td>
+    </tr>
 
+  </table>
+
+
+  <div style="margin-left:120px;margin-top:100px">
+    <table>
+      <tr>
+
+        <td>
+          <a href="@Url.Action(" AccountItem", "AccountItem" )" style="text-decoration:none">
+            <p style="font-family:Calibri;font-size:11pt;font-weight:bold;cursor:pointer">Accounts</p>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td style="height:10px"></td>
+      </tr>
+      <tr>
+        <td>
+          <p style="font-family:Calibri;font-size:11pt;font-weight:bold;cursor:pointer">Agriculture</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="height:10px"></td>
+      </tr>
+      <tr>
+        <td>
+          <p style="font-family:Calibri;font-size:11pt;font-weight:bold;cursor:pointer">Asset</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="height:10px"></td>
+      </tr>
+
+      <tr>
+        <td>
+          <a href="@Url.Action(" BuyingItem", "BuyingItem" )" style="text-decoration:none">
+
+            <p style="font-family:Calibri;font-size:11pt;font-weight:bold;cursor:pointer">Buying</p>
+          </a>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="height:10px"></td>
+      </tr>
+      <tr>
+        <td>
+          <p style="font-family:Calibri;font-size:11pt;font-weight:bold;cursor:pointer">CRM</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="height:10px"></td>
+      </tr>
+      <tr>
+        <td>
+          <p style="font-family:Calibri;font-size:11pt;font-weight:bold;cursor:pointer">Contacts</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="height:10px"></td>
+      </tr>
+      <tr>
+        <td>
+          <p style="font-family:Calibri;font-size:11pt;font-weight:bold;cursor:pointer">Education</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="height:10px"></td>
+      </tr>
+      <tr>
+        <td>
+          <a href="@Url.Action(" HealthCareItem", "HealthCareItem" )" style="text-decoration:none">
+
+            <p style="font-family:Calibri;font-size:11pt;font-weight:bold;cursor:pointer">Healthcare</p>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td style="height:10px"></td>
+      </tr>
+      <tr>
+        <td>
+          <p style="font-family:Calibri;font-size:11pt;font-weight:bold;cursor:pointer">Human Resources</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="height:10px"></td>
+      </tr>
+      <tr>
+        <td>
+          <p style="font-family:Calibri;font-size:11pt;font-weight:bold;cursor:pointer">Integrations</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="height:10px"></td>
+      </tr>
+      <tr>
+        <td>
+          <p style="font-family:Calibri;font-size:11pt;font-weight:bold;cursor:pointer">Learn</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="height:10px"></td>
+      </tr>
+      <tr>
+        <td>
+          <p style="font-family:Calibri;font-size:11pt;font-weight:bold;cursor:pointer">Maintenance</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="height:10px"></td>
+      </tr>
+      <tr>
+        <td>
+          <p style="font-family:Calibri;font-size:11pt;font-weight:bold;cursor:pointer">Mnaufacturing</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="height:10px"></td>
+      </tr>
+      <tr>
+        <td>
+          <p style="font-family:Calibri;font-size:11pt;font-weight:bold;cursor:pointer">Non Profit</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="height:10px"></td>
+      </tr>
+      <tr>
+        <td>
+          <p style="font-family:Calibri;font-size:11pt;font-weight:bold;cursor:pointer">Projects</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="height:10px"></td>
+      </tr>
+
+      <tr>
+        <td>
+          <a href="@Url.Action(" SellingItem", "SellingItem" )" style="text-decoration:none">
+            <p style="font-family:Calibri;font-size:11pt;font-weight:bold;cursor:pointer">Selling</p>
+          </a>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="height:10px"></td>
+      </tr>
+      <tr>
+        <td>
+          <p style="font-family:Calibri;font-size:11pt;font-weight:bold;cursor:pointer">Setup</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="height:10px"></td>
+      </tr>
+      <tr>
+        <td>
+          <a href="@Url.Action(" StockItem", "StockItem" )" s style="text-decoration:none">
+            <p style="font-family:Calibri;font-size:11pt;font-weight:bold;cursor:pointer">Stock</p>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td style="height:10px"></td>
+      </tr>
+      <tr>
+        <td>
+          <p style="font-family:Calibri;font-size:11pt;font-weight:bold;cursor:pointer">Support</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="height:10px"></td>
+      </tr>
+      <tr>
+        <td>
+          <p style="font-family:Calibri;font-size:11pt;font-weight:bold;cursor:pointer">Tools</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="height:10px"></td>
+      </tr>
+      <tr>
+        <td>
+          <p style="font-family:Calibri;font-size:11pt;font-weight:bold;cursor:pointer">Website</p>
+        </td>
+      </tr>
+    </table>
 
 
   </div>
 
+  <div class="div_content_border" style="height: 1738px; width: 950px;border:1px solid;border-top:none;border-color:lightgray; margin-left: 270px; margin-top: -853px;">
 
 
+
+    <!--First row-->
+
+    <div style="width:900px;background-color:white;height:310px">
+      <div style="width: 280px;padding-left: 100px; padding-top: 20px">
+        <label class="label_content label_header" style="font-size:12pt;font-weight:bold">Billing</label>
+        <a href="@Url.Action(" list_Sales_Invoice2", "SalesInvoice" )">
+          <p style="font-family:Calibri;font-size:11pt">Sales Invoice</p>
+        </a>
+        <a href="@Url.Action(" list_PurchaseInvoice2", "Purchase_Invoice" )">
+          <p style="font-family:Calibri;font-size:11pt">Purchase Invoice </p>
+        </a>
+        <a href="@Url.Action(" list_purchase_receipt", "PurchaseReceipt" )">
+          <p style="font-family:Calibri;font-size:11pt">Payment Request</p>
+        </a>
+        <a href="@Url.Action(" list_payment_entry2", "PaymentEntry" )">
+          <p style="font-family:Calibri;font-size:11pt">Payment Entry </p>
+        </a>
+        <a href="@Url.Action(" new_pos", "POS" )">
+          <p style="font-family:Calibri;font-size:11pt">POS</p>
+        </a>
+        <a href="@Url.Action(" list_subscription2", "Subscription" )">
+          <p style="font-family:Calibri;font-size:11pt">Subscription</p>
+        </a>
+        <a href="@Url.Action(" list_accounts_recievable_DataTable", "Accounts_receivable" )">
+          <p style="font-family:Calibri;font-size:11pt">Accounts Receivable </p>
+        </a>
+        <a href="@Url.Action(" list_Accounts_Payable_DataTable", "Accounts_Payable" )">
+          <p style="font-family:Calibri;font-size:11pt">Accounts Payable </p>
+        </a>
+
+
+      </div>
+
+
+      <div style="width:170px;margin-top:-270px;margin-left:620px">
+        <label class="label_content label_header" style="font-size:12pt;font-weight:bold">Company and Accounts</label>
+        <a href="@Url.Action(" list_company2", "Company" )">
+          <p style="font-family:Calibri;font-size:11pt">Company</p>
+        </a>
+        <a href="@Url.Action(" list_journal_entry2", "Journal_Entry" )">
+          <p style="font-family:Calibri;font-size:11pt">Journal Entry</p>
+        </a>
+        <a href="@Url.Action(" chart_of_account", "Chart_of_Account" )">
+          <p style="font-family:Calibri;font-size:11pt">Chart of Accounts</p>
+        </a>
+        <a href="@Url.Action(" list_general_ledger_DataTable", "general_ledger" )">
+          <p style="font-family:Calibri;font-size:11pt">General Ledger</p>
+        </a>
+
+      </div>
+    </div>
+    <!--End First row-->
+    <!--Second row-->
+    <div style="width: 947px; background-color: #eff9f8; height: 240px; margin-top: -10px; ">
+      <div style="width: 270px;padding-left: 100px; padding-top: 20px">
+        <label class="label_content label_header" style="font-size:12pt;font-weight:bold">Masters</label>
+        <a href="@Url.Action(" list_selling_customer", "Selling_Customer" )">
+          <p style="font-family:Calibri;font-size:11pt">Customer</p>
+        </a>
+        <a href="@Url.Action(" list_supplier_DataTable", "Suppliers" )">
+          <p style="font-family:Calibri;font-size:11pt">Supplier</p>
+        </a>
+        <a href="@Url.Action(" list_item", "Selling_Item" )">
+          <p style="font-family:Calibri;font-size:11pt">Item</p>
+        </a>
+
+      </div>
+
+
+      <div style="width:270px;margin-top:-115px;margin-left:620px">
+        <label class="label_content label_header" style="font-size:12pt;font-weight:bold">Accounting Statements</label>
+        <a href="@Url.Action(" list_trial_balance_Datatable", "Trial_Balance" )">
+          <p style="font-family:Calibri;font-size:11pt">Trial Balance</p>
+        </a>
+        <a href="@Url.Action(" list_balance_sheet_DataTable", "Balance_Sheet" )">
+          <p style="font-family:Calibri;font-size:11pt">Balance Sheet</p>
+        </a>
+        <a href="@Url.Action(" list_cash_flow_DataTable", "Cash_Flow" )">
+          <p style="font-family:Calibri;font-size:11pt">Cash Flow</p>
+        </a>
+        <a href="@Url.Action(" list_profit_and_loss_statement_DataTable", "Profit_and_Loss_Statement" )">
+          <p style="font-family:Calibri;font-size:11pt">Profit and Loss Statement</p>
+        </a>
+
+      </div>
+    </div>
+    <!--End Second row-->
+    <!--Third row-->
+
+    <div style="width:900px;background-color:white;height:370px">
+      <div style="width: 290px;padding-left: 100px; padding-top: 20px">
+        <label class="label_content label_header" style="font-size:12pt;font-weight:bold">Banking and Payments</label>
+        <a href="@Url.Action(" list_delivery_trip", "StockDeliveryTrip" )">
+          <p style="font-family:Calibri;font-size:11pt">Update Bank Transaction Dates</p>
+        </a>
+        <a href="@Url.Action(" list_delivery_trip", "StockDeliveryTrip" )">
+          <p style="font-family:Calibri;font-size:11pt">Match Payments with Invoices</p>
+        </a>
+        <a href="@Url.Action(" list_delivery_trip", "StockDeliveryTrip" )">
+          <p style="font-family:Calibri;font-size:11pt">Bank Reconciliation Statement</p>
+        </a>
+        <a href="@Url.Action(" list_delivery_trip", "StockDeliveryTrip" )">
+          <p style="font-family:Calibri;font-size:11pt">Bank Clearance Summary</p>
+        </a>
+        <a href="@Url.Action(" list_delivery_trip", "StockDeliveryTrip" )">
+          <p style="font-family:Calibri;font-size:11pt">Bank Guarantee</p>
+        </a>
+
+      </div>
+
+
+      <div style="width:170px;margin-top:-180px;margin-left:620px">
+        <label class="label_content label_header" style="font-size:12pt;font-weight:bold">Taxes</label>
+        <a href="@Url.Action(" list_sales_taxes_and_charges", "Selling_Sales_Taxes_and_Charges_Template" )">
+          <p style="width:250px;font-family:Calibri;font-size:11pt">Sales Taxes and Charges Template</p>
+        </a>
+        <a href="@Url.Action(" list_Purchase_Taxes_Charges_Template_DataTable", "Purchase_Taxes_and_Charges_Template"
+          )">
+          <p style="width:250px;font-family:Calibri;font-size:11pt">Purchase Taxes and Charges Template</p>
+        </a>
+        <a href="@Url.Action(" list_TaxRule2", "Tax_Rule" )">
+          <p style="width:250px;font-family:Calibri;font-size:11pt">Tax Rule</p>
+        </a>
+        <a href="@Url.Action(" list_sales_register_DataTable", "Sales_Register" )">
+          <p style="width:250px;font-family:Calibri;font-size:11pt">Sales Register</p>
+        </a>
+        <a href="@Url.Action(" list_purchase_register_DataTable", "Purchase_Register" )">
+          <p style="width:250px;font-family:Calibri;font-size:11pt">Purchase Register</p>
+        </a>
+
+      </div>
+    </div>
+
+    <!--End Third row-->
+    <!--Fourth row-->
+    <div style="width: 947px; background-color: #eff9f8; height: 220px; margin-top: -90px; ">
+      <div style="width: 270px;padding-left: 100px; padding-top: 15px;">
+        <label class="label_content label_header" style="font-size:12pt;font-weight:bold">Budget and Cost Center</label>
+        <a href="@Url.Action(" ChartOfCostCenter", "ChartOfCostCenter" )">
+          <p>Chart of Cost Centers</p>
+        </a>
+        <a href="@Url.Action(" list_budget2", "Budget" )">
+          <p style="width:250px;font-family:Calibri;font-size:11pt">Budget</p>
+        </a>
+        <a href="@Url.Action(" list_Budget_Variance_Report_DataTable", "Budget_Variance_Report" )">
+          <p style="width:250px;font-family:Calibri;font-size:11pt">Budget Variance Report</p>
+        </a>
+        <a href="@Url.Action(" list_monthly_distribution2", "Monthly_Distribution" )">
+          <p style="width:300px;font-family:Calibri;font-size:11pt">Monthly Distribution</p>
+        </a>
+      </div>
+
+
+      <div style="width:170px;margin-top:-150px;margin-left:620px">
+        <label class="label_content label_header" style="font-size:12pt;font-weight:bold">Tools</label>
+        <a href="@Url.Action(" list_period_closing_voucher2", "Period_Closing_Voucher" )">
+          <p style="font-family:Calibri;font-size:11pt">Period Closing Voucher</p>
+        </a>
+        <a href="@Url.Action(" list_stock_analytics", "Report_Stock_Analytics" )">
+          <p style="font-family:Calibri;font-size:11pt">Cheque Print Template</p>
+        </a>
+        <a href="@Url.Action(" new_Opening_Invoice_Creation_Tool", "Opening_Invoice_Creation_Tool" )">
+          <p style="width:250px;font-family:Calibri;font-size:11pt">Opening Invoice Creation Tool</p>
+        </a>
+
+
+      </div>
+    </div>
+    <!--End Fourth row-->
+
+    <div style="width: 946px; background-color: white; height: 268px; margin-top:-10px; ">
+      <div style="width: 270px;padding-left: 100px; padding-top: 15px;">
+        <label class="label_content label_header" style="font-size:12pt;font-weight:bold">Setup</label>
+        <a href="@Url.Action(" new_Accounts_Setting2", "account_setting" )">
+          <p style="width:270px;font-family:Calibri;font-size:11pt">Accounts Settings</p>
+        </a>
+        <a href="@Url.Action(" list_fiscal_year2", "Fiscal_year" )">
+          <p style="width:270px;font-family:Calibri;font-size:11pt">Fiscal Year</p>
+        </a>
+        <a href="@Url.Action(" list_currency2", "Currency1" )">
+          <p style="width:250px;font-family:Calibri;font-size:11pt">Currency</p>
+        </a>
+        <a href="@Url.Action(" list_currency_exchange2", "Currency_Exchange" )">
+          <p style="width:300px;font-family:Calibri;font-size:11pt">Currency Exchange</p>
+        </a>
+        <a href="@Url.Action(" list_batch_wise_balance_history", "Report_Batch_Wise_Balance_History" )">
+          <p style="font-family:Calibri;font-size:11pt">Payment Gateway Account</p>
+        </a>
+        <a href="@Url.Action(" list_batch_item_expiry_status", "Report_Batch_Item_Expiry_Status" )">
+          <p style="font-family:Calibri;font-size:11pt">POS Settings</p>
+        </a>
+        <a href="@Url.Action(" list_POS_Profile2", "Pos_Profile" )">
+          <p style="font-family:Calibri;font-size:11pt">Point-of-Sale Profile</p>
+        </a>
+        <a href="@Url.Action(" list_terms_conditions", "Selling_Terms_Conditions" )">
+          <p style="font-family:Calibri;font-size:11pt;width:270px">Terms and Conditions Template</p>
+        </a>
+        <a href="@Url.Action(" list_mode_of_payment2", "Mode_of_Payment" )">
+          <p style="font-family:Calibri;font-size:11pt">Mode of Payment</p>
+        </a>
+      </div>
+      <div style="width:170px;margin-top:-295px;margin-left:620px">
+        <label class="label_content label_header" style="font-size:12pt;font-weight:bold">To Bill</label>
+        <a href="@Url.Action(" list_Ordered_Items_To_Be_Billed_DataTable", "Ordered_Items_to_Be_Billed" )">
+          <p style="font-family:Calibri;font-size:11pt">Ordered Items To Be Billed</p>
+        </a>
+        <a href="@Url.Action(" list_Delivered_Items_To_Be_Billed_DataTable", "Delivered_Items_To_Be_Billed" )">
+          <p style="font-family:Calibri;font-size:11pt">Delivered Items To Be Billed</p>
+        </a>
+        <a href="@Url.Action(" list_Purchase_Order_Items_To_Be_Billed_DataTable", "Purchase_Order_Items_To_Be_Billed"
+          )">
+          <p style="width:250px;font-family:Calibri;font-size:11pt">Purchase Order Items To Be Billed</p>
+        </a>
+        <a href="@Url.Action(" list_Received_Items_To_Be_Billed_DataTable", "Received_Items_To_Be_Billed" )">
+          <p style="width:250px;font-family:Calibri;font-size:11pt">Received Items To Be Billed</p>
+        </a>
+
+
+
+      </div>
+    </div>
+    <!------------------------------------------------------------------------------------>
+
+    <div style="width: 948px; background-color: #eff9f8; height: 368px; margin-top:70px; ">
+      <div style="width: 270px;padding-left: 100px; padding-top: 15px;">
+        <label class="label_content label_header" style="font-size:12pt;font-weight:bold">Analytics</label>
+        <a href="@Url.Action(" list_gross_profit_DataTable", "Gross_Profit" )">
+          <p style="width:270px;font-family:Calibri;font-size:11pt">Gross Profit</p>
+        </a>
+        <a href="@Url.Action(" list_purchase_invoice_trends_DataTable", "Purchase_Invoice_Trends" )">
+          <p style="width:270px;font-family:Calibri;font-size:11pt">Purchase Invoice Trends</p>
+        </a>
+        <a href="@Url.Action(" list_Sales_Invoice_Trends_DataTable", "Sales_Invoice_Trends" )">
+          <p style="width:250px;font-family:Calibri;font-size:11pt">Sales Invoice Trends</p>
+        </a>
+      </div>
+
+      <div style="width:170px;margin-top:-115px;margin-left:620px">
+        <label class="label_content label_header" style="font-size:12pt;font-weight:bold">Other Reports</label>
+        <a href="@Url.Action(" list_trial_balance_for_party_DataTable", "Trial_Balance_for_Party" )">
+          <p style="font-family:Calibri;font-size:11pt">Trial Balance for Party</p>
+        </a>
+        <a href="@Url.Action(" list_Profitability_Analysis_DataTable", "Profitability_Analysis" )">
+          <p style="font-family:Calibri;font-size:11pt">Profitability Analysis</p>
+        </a>
+        <a href="@Url.Action(" list_payment_period_based_on_invoice_date_DataTable",
+          "Payment_Period_Based_On_Invoice_Date" )">
+          <p style="width:250px;font-family:Calibri;font-size:11pt">Payment Period Based On Invoice Date</p>
+        </a>
+        <a href="@Url.Action(" list_sales_partner_commission_DataTable", "Sales_Prtner_Commission" )">
+          <p style="width:250px;font-family:Calibri;font-size:11pt">Sales Partners Commission</p>
+        </a>
+        <a href="@Url.Action(" list_item_wise_sales_register_DataTable", "Item_wise_Sales_Register" )">
+          <p style="width:250px;font-family:Calibri;font-size:11pt">Item-wise Sales Register</p>
+        </a>
+        <a href="@Url.Action(" list_item_wise_purchase_register_DataTable", "Item_wise_Purchase_Register" )">
+          <p style="width:250px;font-family:Calibri;font-size:11pt">Item-wise Purchase Register</p>
+        </a>
+        <a href="@Url.Action(" list_accounts_receivable_summary_DataTable", "Accounts_Receivable_Summary" )">
+          <p style="width:250px;font-family:Calibri;font-size:11pt">Accounts Receivable Summary</p>
+        </a>
+        <a href="@Url.Action(" list_accounts_payable_summary_DataTable", "Accounts_Payable_Summary" )">
+          <p style="width:250px;font-family:Calibri;font-size:11pt">Accounts Payable Summary</p>
+        </a>
+        <a href="@Url.Action(" list_customer_credit_balance_DataTable", "Customer_Credit_Balance" )">
+          <p style="width:250px;font-family:Calibri;font-size:11pt">Customer Credit Balance</p>
+        </a>
+        <a href="@Url.Action(" list_sales_payment_summary_DataTable", "Sales_Payment_Summary" )">
+          <p style="width:250px;font-family:Calibri;font-size:11pt">Sales Payment Summary</p>
+        </a>
+
+      </div>
+    </div>
+    <!----------------------------------------------------------------------------------------->
+  </div>
+  <br><br><br><br>
+
+  <script>
+    $("#logo_erp").on("click", function () {
+      window.location.href = '@Url.Action("Main", "Main")';
+
+    });
+  </script>
 
 </body>
 
